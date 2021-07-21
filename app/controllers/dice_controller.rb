@@ -1,5 +1,13 @@
 class DiceController < ApplicationController
 
+  def infinity_and_beyond
+    
+    render({ :template => "dice_templates/infinity.html.erb"})
+
+  end
+
+  
+  
   def one_six
     @array_of_rolls = Array.new
 
