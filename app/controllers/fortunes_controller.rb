@@ -5,6 +5,10 @@ class FortunesController < ApplicationController
     this_zodiac = all_zodiacs.fetch(@sign)
     @this_zodiac_name = this_zodiac.fetch(:name)
     @horoscope = this_zodiac.fetch(:horoscope)
+
+    @array_of_numbers = Array.new
+    another_number = rand(1...100)
+    @array_of_numbers.push(another_number)
     
     render({ :template => "signs/main.html.erb"})
 
